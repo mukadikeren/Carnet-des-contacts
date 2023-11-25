@@ -1,15 +1,16 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 .contenaire-central {
-   display: flex;
-   flex-direction: column;
-   gap:15px ;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.repertoire{
+.repertoire {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +20,7 @@
     height: 70px;
 }
 
-.Formulaire-liste{
+.Formulaire-liste {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -27,15 +28,73 @@
     padding-right: 100px;
 
 }
-.Formulaire{
-width: 40%;
-border: 1px solid #C4C4C4;
-height: 500px;
+
+
+
+.Formulaire {
+    width: 40%;
+    border: 1px solid #C4C4C4;
+    height: 500px;
 }
-.liste{
+
+.liste {
     width: 60%;
 }
-.titre1{
+
+/*container de li: un element de ul*/
+#li_liste {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(243, 236, 236);
+    height: 21vh;
+    border: 1px solid gray;
+}
+
+/*Image Affichée*/
+img {
+    width: 18%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/*container de li: un element de ul*/
+.container_ecrits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    width: 77%;
+}
+
+/*container de li: un element de ul*/
+.containerNom_Fontawesome {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*container de li: un element de ul*/
+.container_separation {
+    display: flex;
+    gap: 10px;
+}
+
+/*container de Prenom, nom et Groupe*/
+.containerPrenom_Groupe {
+    font-weight: bold;
+}
+
+/*container de la question: what lorem*/
+.what_lorem {
+    display: block;
+    margin: 5px;
+}
+
+
+
+.titre1 {
     display: flex;
     flex-direction: row;
     background-color: #0880D6;
@@ -43,41 +102,48 @@ height: 500px;
     justify-content: center;
     align-items: center;
     height: 40px;
-    
+
 }
-.titre2{
+
+.titre2 {
     display: flex;
     flex-direction: row;
-    background-color: #0880D6 ;
+    background-color: #0880D6;
     color: white;
     justify-content: center;
     align-items: center;
     height: 40px;
 }
-label{
+
+label {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
     color: #0880D6;
     width: 63px;
-    height: 24px;font-family: Poppins;
+    height: 24px;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
-    
+
 }
-input{
+
+input {
     width: 95%;
     height: 20px;
     border: 1px;
     color: linear-gradient, #C4C4C4;
     border: 1px solid #C4C4C4;
-}.label{
+}
+
+.label {
     padding-left: 10px;
 }
-.span1{
+
+.span1 {
     width: 95%;
     height: 60px;
     text-align: center;
