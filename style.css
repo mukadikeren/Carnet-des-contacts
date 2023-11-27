@@ -2,13 +2,23 @@
     padding: 0px;
     margin: 0px;
 }
+/* RESONSIVE TABLETTE */
+@media screen and (min-width: 600px) and (max-width:1086px) {
+    .contenaire-central{
+        width: 100%;
+    }
+    
+}
 
+/* elle englobe tout le deux block */
 .contenaire-central {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* elle englobe tout le block du titre principal */
 .repertoire {
     display: flex;
     flex-direction: column;
@@ -19,7 +29,9 @@
     height: 70px;
 }
 
+/* elle contien le deux block */
 .Formulaire-liste {
+   
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -27,29 +39,29 @@
     padding-right: 100px;
 
 }
-
+/* elle contien tout le contenu telque input, label,button */
 .Formulaire {
     border: 1px solid #C4C4C4;
-    width: 560px;
+    width: 40%;
+    /* width: 560px; */
     height: 760px;
     padding: 14px, 21px, 61px, 21px;
     gap: 26px;
-
 }
-
+/* contien les element du deuxieme bloque */
 .liste {
     width: 60%;
     border: 1px solid #C4C4C4;
     height: 660px;
-    
 
 }
+/* titre pour .Formulaire */
 .titre-principal{
     font-weight: bold;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
-
+/* elle contient juste le block du titre1 */
 .titre1 {
     display: flex;
     flex-direction: row;
@@ -58,11 +70,12 @@
     justify-content: center;
     align-items: center;
     height: 40px;
+    width: 100%;
     font-weight: bold;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
-
+/* elle contient juste le block du titre 2 */
 .titre2 {
     display: flex;
     flex-direction: row;
@@ -75,7 +88,7 @@
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
-
+/* pour nodifier les label nom, telephone, bio, email */
 label {
     display: flex;
     flex-direction: column;
@@ -89,7 +102,7 @@ label {
     letter-spacing: 0em;
 
 }
-
+/* pour modifier les input text */
 input {
     width: 95%;
     height: 40px;
@@ -99,23 +112,16 @@ input {
     padding: 45px, 77px, 45px, 77px;
     justify-content: space-between;
 
-    /* border: 1px solid #C4c4c4;
-    border: dotted; 
-    width: 500px;
-    height: 60px;
-    border: 1px;
-    color:linear-gradient, #C4C4C4; */
-
 }
-
+/* pour modifier tout le block des inputet label */
 .label {
     padding-left: 10px;
 }
-
+/* pour mdofier le block de la photo a placé dans le cadre */
 .span1 {
  
     border: 1px solid #C4C4C4;
-    width: 518px;
+    width: 93%;
     height:138px;
     padding: 45px, 77px, 45px, 77px;
     border: dotted;
@@ -133,11 +139,8 @@ textarea {
     color: #C4C4C4;
     border: 1px solid #C4C4C4
 }
-
+/* pour les bouton des id */
 button {
-    /* width: 50px;
-    height: 30px;
-    gap: 10px */
     width: 100px;
     height: 40px;
     border: 1px;
@@ -145,9 +148,9 @@ button {
     gap: 10px;
     font-family: 'Poppins', sans-serif;
 
-
 }
 
+/* pour modifier tout le block des bouton */
 .buton {
     padding-left: 10px;
     padding-top: 15px;
@@ -155,7 +158,62 @@ button {
     justify-content: center;
     
 }
-.colone1{
-    border-radius: 50%;
-    background-color: aqua;
+
+
+.liste {
 }
+
+img{
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+.photo1{
+    border-bottom: 1px solid #C4C4C4;
+    color: #C4C4C4;
+    width:960px;
+    height:150px;
+    padding: 20px;
+    border: 0px, 0px, 1px, 0px;
+    gap: 52px;
+    
+}
+.suppression-contacts{
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+    
+
+}
+
+.bi-trash{
+    
+width: 16.86px;
+line-height: 24px;
+color: #FF3838;
+    
+}
+.bi-person{
+    align-content: left;
+    width: 16.86px;
+    color: #555555;
+}
+
+/* .photo2{
+    border-bottom: 1px solid #C4C4C4;
+    color: #C4C4C4;
+    width:960px;
+    height:150px;
+    padding: 20px;
+    border: 0px, 0px, 1px, 0px;
+    gap: 52px;
+}
+.photo3{
+    color: #C4C4C4;
+    width:960px;
+    height:150px;
+    padding: 20px;
+    border: 0px, 0px, 1px, 0px;
+    gap: 52px;
+} */
