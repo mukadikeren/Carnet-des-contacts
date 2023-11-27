@@ -131,6 +131,17 @@ input {
     line-height: 24px;   
     text-align: center;
 }
+.Deposez-ici{
+    justify-content: center;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #555555;
+
+}
 
 textarea {
     width: 95%;
@@ -141,12 +152,6 @@ textarea {
 }
 /* pour les bouton des id */
 button {
-    width: 100px;
-    height: 40px;
-    border: 1px;
-    justify-content: center;
-    gap: 10px;
-    font-family: 'Poppins', sans-serif;
 
 }
 
@@ -156,9 +161,28 @@ button {
     padding-top: 15px;
     font-family: 'Poppins', sans-serif;
     justify-content: center;
-    
+   
 }
-
+#boutoncreer{
+    color: white;
+    background-color: #0880D6;
+    width: 100px;
+    height: 40px;
+    border: 1px;
+    justify-content: center;
+    gap: 36px;
+    font-family: 'Poppins', sans-serif;
+}
+#boutonreinit{
+    color: white;
+    background-color: #FF3838;
+    width: 100px;
+    height: 40px;
+    border: 1px;
+    justify-content: center;
+    gap: 36px;
+    font-family: 'Poppins', sans-serif;
+}
 
 .liste {
 }

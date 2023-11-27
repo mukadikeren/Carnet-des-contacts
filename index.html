@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    
     <div class="contenaire-central">
         <div class="repertoire">
             <span class="titre-principal">Répertoire des contacts</span>
@@ -23,19 +24,22 @@
 
                 <div class="label">
                     <label class="Prenom">Prénom</label>
-                    <input id="Prenom-input" type="text" maxlength="20">
+                    <input id="prenom" type="text">
+                    <span id="prenomError"></span>
 
                     <label class="Nom">Nom</label>
-                    <input id="Nom-input" type="text" maxlength="20">
+                    <input id="nom" type="text">
+                    <span id="nomError"></span>
 
                     <label class="telephone">Téléphone</label>
-                    <input id="telephone-input" type="tel" maxlength="10">
-
+                    <input id="telephone" type="tel">
+                    <span id="telephoneError"></span>
                     <label class="Groupe">Groupe</label>
-                    <input id="Groupe-input" type="number">
+                    <input id="groupe" type="number">
 
                     <label class="email">Email</label>
-                    <input id="emailinput" type="email">
+                    <input id="email" type="email">
+                    <span id="emailError"></span>
 
                     <label class=" Bio">Bio</label>
                     <textarea name="" id="" cols="30" rows="4"></textarea>
@@ -45,8 +49,8 @@
                     </div>
                 </div>
                 <div class="bouton">
-                    <button id="monbouton" style="color: white;background-color: #0880D6;">Créer</button>
-                    <button id="monbouton" style="color: white;background-color: #FF3838;">Reinit</button>
+                    <button id="boutoncreer">Créer</button>
+                    <button id="boutonreinit">Reinit</button>
                 </div>
 
             </div>
@@ -55,6 +59,9 @@
                 <span class="titre2">liste des contacts</span>
                 <div class="photo1">
                     <img src="" alt="">
+                    <div id="premierecase">
+
+                    </div>
                     
                     <div class="suppression-contacts" >
                         <i class="bi bi-trash"></i>
@@ -63,16 +70,10 @@
                   
                 </div>
                 <ul id="tasklist"></ul>
-                <!-- <div class="photo2">
-                    <img src="" alt="">
-                </div>
-                <div class="photo3">
-                    <img src="" alt="">
-                </div> -->
+            
             </div>
         </div>
     </div>
-
 
     <script src="java.js"></script>
 </body>
