@@ -222,3 +222,123 @@ button {
     font-family: 'Poppins', sans-serif;
     justify-content: center;
 }
+/* Responsive design mobile */
+@media screen and ( min-width:200px) and ( max-width:600px) {
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .contenaire-central {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .Formulaire-liste {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        flex-wrap: wrap;
+
+    }
+    .Formulaire{
+        /* height: 52px; */
+        width: 100%;
+    }
+    button {
+        width: 50px;
+        height: 30px;
+        border: 1px;
+        justify-content: center;
+        gap: 50px;
+        font-family: 'Poppins', sans-serif;  
+        padding: 45px, 77px, 45px, 77px;
+    }
+    .titre1 {
+        display: flex;
+        flex-direction: row;
+        background-color: #0880D6;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        font-weight: bold;
+        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .titre-principal{
+        font-weight: bold;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .repertoire {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        background-color: #0880D6;
+        color: white;
+        height: 20px;
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+        color: #0880D6;
+        width: 100%;
+        height: 35px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        font-weight: 400px;
+        line-height: 30px;
+        letter-spacing: 0em;
+    
+    }
+    input {
+        width: 90%;
+        height: 20px;
+        border: 1px;
+        color: linear-gradient, #C4C4C4;
+        border: 1px solid #C4C4C4;
+        
+        justify-content: space-between;
+        padding: 45px, 77px, 45px, 77px;
+    }
+    textarea{
+        width: 90%;
+        height: 20px;
+    }
+    .span1 {
+ 
+        border: 1px solid #C4C4C4;
+        width: 89%;
+        height:110px;
+        padding: 45px, 77px, 45px, 77px;
+        border: dotted;
+        justify-content: space-between;
+        color: #bbb1b1;
+        font-family: 'Poppins', sans-serif;
+        line-height: 24px;   
+        text-align: center;
+    }
+    .liste {
+        width: 100%;
+        border: 1px solid #C4C4C4;
+        height: 500px;
+    }
+    .titre2 {
+        display: flex;
+        flex-direction: row;
+        background-color: #0880D6;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        font-weight: bold;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    
+}
