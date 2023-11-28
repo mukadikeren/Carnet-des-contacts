@@ -20,46 +20,42 @@
         <div class="Formulaire-liste">
             <div class="Formulaire">
                 <span class="titre1">Formulaire de contact</span>
-
                 <div class="label">
-                    <label class="Prenom">Prénom</label>
-                    <input id="Prenom-input" type="text" maxlength="20">
 
-                    <label class="Nom">Nom</label>
-                    <input id="Nom-input" type="text" maxlength="20">
+                    <label>Prénom</label>
+                    <input type="text" id="prenom">
+                    <span id="prenomError"></span>
+                    <label>Nom</label>
+                    <input type="text" id="nom">
+                    <span id="nomError"></span>
+                    <label>Téléphone</label>
+                    <input type="tel" id="telephone">
+                    <span id="telephoneError"></span>
+                    <label>Groupe</label>
+                    <input type="number" id="groupe">
+                    <label>Email</label>
+                    <input type="email" id="email">
+                    <span id="emailError"></span>
+                    <label>Bio</label>
 
-                    <label class="telephone">Téléphone</label>
-                    <input id="telephone-input" type="tel" maxlength="10">
-
-                    <label class="Groupe">Groupe</label>
-                    <input id="Groupe-input" type="number">
-
-                    <label class="email">Email</label>
-                    <input id="emailinput" type="email">
-
-                    <label class=" Bio">Bio</label>
-                    <textarea name="" id="" cols="30" rows="4"></textarea>
-
+                    <textarea name="" id="bio" cols="30" rows="4"></textarea>
                     <div class="span1">
                         <span class="Deposez-ici">Deposez la photo <br> ici</span>
                     </div>
+                    <div class="bouton">
+                        <button id="boutonCréer" style="color: white;background-color: #0880D6;">Créer</button>
+                        <button id="boutonReinit" style="color: white;background-color: #FF3838;">Reinit</button>
+                    </div>
                 </div>
-                <div class="bouton">
-                    <button id="monbouton" style="color: white;background-color: #0880D6;">Créer</button>
-                    <button id="monbouton" style="color: white;background-color: #FF3838;">Reinit</button>
-                </div>
-
             </div>
             <div class="liste">
                 <span class="titre2">liste des contacts</span>
-                <ul>
-                    <li id="li_liste">
+                <ul id="ul">
+                    <!-- <li id="li_liste">
 
                         <img src="https://media.licdn.com/dms/image/D4E03AQH6bd5CS2viWQ/profile-displayphoto-shrink_800_800/0/1683023750582?e=2147483647&v=beta&t=ykBYwBoUwId8oy33HM4at7_XdJut2axXMeO-QiA4V_s"
                             alt="">
-                        <!-- ce container contient tous les elements à afficher: liste endehors, sauf l'image de profil  -->
                         <div class="container_ecrits">
-                            <!-- <p>L'autres coté</p> -->
                             <div class="containerNom_Fontawesome">
                                 <div class="containerPrenom_Groupe  container_separation ">
                                     <span>Prénom</span><span>Nom</span><span>-</span><span>Groupe</span>
@@ -84,71 +80,7 @@
                                 </span>
                             </div>
                         </div>
-                    </li>
-                    <li id="li_liste">
-
-                        <img src="https://media.licdn.com/dms/image/D4E03AQH6bd5CS2viWQ/profile-displayphoto-shrink_800_800/0/1683023750582?e=2147483647&v=beta&t=ykBYwBoUwId8oy33HM4at7_XdJut2axXMeO-QiA4V_s"
-                            alt="">
-                        <!-- ce container contient tous les elements à afficher: liste endehors, sauf l'image de profil  -->
-                        <div class="container_ecrits">
-                            <!-- <p>L'autres coté</p> -->
-                            <div class="containerNom_Fontawesome">
-                                <div class="containerPrenom_Groupe container_separation ">
-                                    <span>Prénom</span><span>Nom</span><span>-</span><span>Groupe</span>
-                                </div>
-                                <div class="container_separation ">
-                                    <i class="fa-solid fa-user-pen" style="color: #0f1114;"></i>
-                                    <i class="fa-regular fa-trash-can" style="color: #f60440;"></i>
-                                </div>
-                            </div>
-
-                            <div class="container_telephone">
-                                <span>Téléphone</span>
-                            </div>
-
-                            <div class="container_lorem">
-                                <span class="what_lorem"> what Lorem ipsum ?</span>
-
-                                <span class="what_lorem_is"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Debitis blanditiis
-                                    quisquam
-                                    quod consequuntur non quae.
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="li_liste">
-
-                        <img src="https://media.licdn.com/dms/image/D4E03AQH6bd5CS2viWQ/profile-displayphoto-shrink_800_800/0/1683023750582?e=2147483647&v=beta&t=ykBYwBoUwId8oy33HM4at7_XdJut2axXMeO-QiA4V_s"
-                            alt="">
-                        <!-- ce container contient tous les elements à afficher: liste endehors, sauf l'image de profil  -->
-                        <div class="container_ecrits">
-                            <!-- <p>L'autres coté</p> -->
-                            <div class="containerNom_Fontawesome">
-                                <div class="containerPrenom_Groupe container_separation ">
-                                    <span>Prénom</span><span>Nom</span><span>-</span><span>Groupe</span>
-                                </div>
-                                <div class="container_separation ">
-                                    <i class="fa-solid fa-user-pen" style="color: #0f1114;"></i>
-                                    <i class="fa-regular fa-trash-can" style="color: #f60440;"></i>
-                                </div>
-                            </div>
-
-                            <div class="container_telephone">
-                                <span>Téléphone</span>
-                            </div>
-
-                            <div class="container_lorem">
-                                <span class="what_lorem"> what Lorem ipsum ?</span>
-
-                                <span class="what_lorem_is"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Debitis blanditiis
-                                    quisquam
-                                    quod consequuntur non quae.
-                                </span>
-                            </div>
-                        </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
