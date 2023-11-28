@@ -169,8 +169,7 @@ btnCréer.addEventListener('click', () => {
 
     let divFont_Awesome = document.createElement('div');
     divFont_Awesome.setAttribute('class', 'container_separation');
-    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i>';
-    divFont_Awesome.innerHTML = '<i class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
+    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
 
     /*Fin de la Création de la Div contant les Prenom, Nom - Groupe*/
 
@@ -179,9 +178,33 @@ btnCréer.addEventListener('click', () => {
     divNom_Fontawesome.appendChild(divFont_Awesome);
     /*Fin de la mise dans le parent*/
 
+    /*Début: création de la Div et span du Telephone et la mise de la span dans cette div*/
+    let divTelephone = document.createElement('div');
+    divTelephone.setAttribute('class', 'container_telephone');
+    let spanTelephone = document.createElement('span');
+    spanTelephone.innerHTML = telephone.value;
+
+    divTelephone.appendChild(spanTelephone);
+    /*Fin création de la Div du Telephone*/
+
+
+    /*Début: création de la Div et span de Lorem ipsum et la mise de ces span dans la Div parent*/
+    let divBio = document.createElement('div');
+    divBio.setAttribute('class', 'container_lorem');
+
+    let spanBio = document.createElement('span');
+    spanBio.setAttribute('class', 'what_lorem');
+    spanBio.innerHTML = Bio.value;
+
+
+    divBio.appendChild(spanBio);
+    /*Fin création de la Div et span de Lorem ipsum */
+
+
     /*Début: mise de la Div Fontawesome dans son parent et des autres dans leur parent*/
     divEcrits.appendChild(divNom_Fontawesome);
-
+    divEcrits.appendChild(divTelephone);
+    divEcrits.appendChild(divBio);
     /*Fin de la mise dans le parent*/
 
 
