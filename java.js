@@ -20,6 +20,21 @@ let btnReinit = document.getElementById('boutonReinit');
 
 let ul = document.getElementById('ul');
 
+
+let clients = [];
+// creation Table
+// let clients = [];
+// function AjoutContact(){
+//     clients.push({
+//         PRENOM: prenom.value,
+//         NOM: nom.value,
+//         TELEPHONE: telephone.value,
+//         GROUPE: groupe.value,
+//         EMAIL: email.value,
+//         BIO: Bio.value,
+//     });
+// }
+
 // mettre le bordur en rouge une fois qu'ont sort de l'input du telephone
 
 telephone.addEventListener("blur", (event) => {
@@ -127,7 +142,24 @@ btnReinit.addEventListener('click', () => {
 
 //Début critère d'acceptation Button Reinitiliser
 
+
+// Fin Critère d'acceptation Button Reinitiliser
+
+
+
+//Début critère d'acceptation Button Reinitiliser
+
 btnCréer.addEventListener('click', () => {
+
+    clients.push({
+        PRENOM: prenom.value,
+        NOM: nom.value,
+        TELEPHONE: telephone.value,
+        GROUPE: groupe.value,
+        EMAIL: email.value,
+        BIO: Bio.value,
+    });
+
 
     let li = document.createElement('li');
     li.setAttribute('id', 'li_liste');
@@ -169,7 +201,7 @@ btnCréer.addEventListener('click', () => {
 
     let divFont_Awesome = document.createElement('div');
     divFont_Awesome.setAttribute('class', 'container_separation');
-    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
+    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i id="suppression" class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
 
     /*Fin de la Création de la Div contant les Prenom, Nom - Groupe*/
 
@@ -213,6 +245,10 @@ btnCréer.addEventListener('click', () => {
 
 
     ul.appendChild(li);
+
+    suppression.addEventListener('click', () => {
+        li.remove();
+    });
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
