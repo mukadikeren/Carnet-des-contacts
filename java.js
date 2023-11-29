@@ -130,11 +130,11 @@ btnReinit.addEventListener('click', () => {
     prenom.value = '';
     email.value = '';
     emailInput.value = '';
-    errorMessage.innerHTML = '';
+    errorMessage.value = '';
     nom.value = '';
-    nomError.innerHTML = '';
+    nomError.value = '';
     groupe.value = '';
-    Bio.innerHTML = '';
+    Bio.value = '';
 
 })
 // Fin Critère d'acceptation Button Reinitiliser
@@ -160,6 +160,7 @@ btnCréer.addEventListener('click', () => {
         BIO: Bio.value,
     });
 
+    let c = clients.length - 1;
 
     let li = document.createElement('li');
     li.setAttribute('id', 'li_liste');
@@ -181,13 +182,13 @@ btnCréer.addEventListener('click', () => {
     divPrenom_Groupe.setAttribute('class', 'container_separation');
 
     let spanPrenom = document.createElement('span');
-    spanPrenom.innerHTML = prenom.value;
+    spanPrenom.innerHTML = clients[c].PRENOM;
     let spanNom = document.createElement('span');
-    spanNom.innerHTML = nom.value;
+    spanNom.innerHTML = clients[c].NOM;
     let spanTrait = document.createElement('span');
     spanTrait.innerHTML = '-';
     let spanGroupe = document.createElement('span');
-    spanGroupe.innerHTML = groupe.value;
+    spanGroupe.innerHTML = clients[c].GROUPE;
 
     /*Mettre les spans:nom,prenom,....dans leur div*/
     divPrenom_Groupe.appendChild(spanPrenom);
@@ -214,7 +215,7 @@ btnCréer.addEventListener('click', () => {
     let divTelephone = document.createElement('div');
     divTelephone.setAttribute('class', 'container_telephone');
     let spanTelephone = document.createElement('span');
-    spanTelephone.innerHTML = telephone.value;
+    spanTelephone.innerHTML = clients[c].TELEPHONE;
 
     divTelephone.appendChild(spanTelephone);
     /*Fin création de la Div du Telephone*/
@@ -226,7 +227,7 @@ btnCréer.addEventListener('click', () => {
 
     let spanBio = document.createElement('span');
     spanBio.setAttribute('class', 'what_lorem');
-    spanBio.innerHTML = Bio.value;
+    spanBio.innerHTML = clients[c].BIO;
 
 
     divBio.appendChild(spanBio);
@@ -240,13 +241,13 @@ btnCréer.addEventListener('click', () => {
     /*Fin de la mise dans le parent*/
 
 
-    li.appendChild(image)
-    li.appendChild(divEcrits)
-
-
+    li.appendChild(image);
+    li.appendChild(divEcrits);
     ul.appendChild(li);
 
+
     suppression.addEventListener('click', () => {
+        // clients.pop();
         li.remove();
     });
 })
