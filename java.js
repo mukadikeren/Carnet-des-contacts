@@ -219,6 +219,21 @@ btnCréer.addEventListener('click', () => {
 // Fin Critère d'acceptation Button Reinitiliser
 
 
+// bouton Reinit
+let boutonreinit = document.querySelector("#boutonreinit");
+
+boutonreinit.addEventListener("click", function () {
+    let input = document.querySelector("#li")
+    console.log(input.value); 
+    let li = document.querySelector("#li");
+    let li = document.createElement("li");
+    li.innerHTML= input.value
+    premierecase.appendChild(li);
+
+
+})
+
+
 // photo a ajouter
 
 
