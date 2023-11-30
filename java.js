@@ -18,6 +18,8 @@ let btnCréer = document.getElementById('boutonCréer');
 
 let btnReinit = document.getElementById('boutonReinit');
 
+let myregex = /^[a-zA-Z\s]+$/;
+
 let ul = document.getElementById('ul');
 
 // mettre le bordur en rouge une fois qu'ont sort de l'input du telephone
@@ -82,7 +84,10 @@ nom.addEventListener('blur', function () {
         nom.style.borderColor = 'red';
         nomError.textContent = 'Veuillez renseigner un nom avec moins de 50 caractères.';
     }
-
+    else if(myregex.test(prenom.value) == false){
+        nom.style.borderColor = 'red';
+        nomError.textContent = 'Le nom dois comportez que des lettres';
+    }
     else {
         nom.style.borderColor = '';
         nomError.textContent = '';
@@ -101,6 +106,10 @@ prenom.addEventListener('blur', function () {
         prenom.style.borderColor = 'red';
         prenomError.textContent = 'Veuillez renseigner un prenom avec moins de 50 caractères.';
     }
+    else if(myregex.test(prenom.value) == false){
+        prenom.style.borderColor = 'red';
+        prenomError.textContent = 'Le prenom dois comportez que des lettres';
+    }
     else {
         prenom.style.borderColor = '';
         prenomError.textContent = '';
@@ -114,12 +123,18 @@ prenom.addEventListener('blur', function () {
 btnReinit.addEventListener('click', () => {
     prenom.value = '';
     email.value = '';
-    emailInput.value = '';
-    errorMessage.innerHTML = '';
     nom.value = '';
-    nomError.innerHTML = '';
     groupe.value = '';
-    Bio.innerHTML = '';
+    telephone.value = '';
+    Bio.value = '',
+    emailError.textContent = '';
+    telephoneError.textContent = '';
+    prenomError.textContent = '';
+    nomError.textContent = '';
+    prenom.style.borderColor = '';
+    nom.style.borderColor = '';
+    email.style.borderColor = '';
+    telephone.style.borderColor = '';
 
 })
 // Fin Critère d'acceptation Button Reinitiliser
