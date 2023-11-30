@@ -18,6 +18,8 @@ let btnCréer = document.getElementById('boutonCréer');
 
 let btnReinit = document.getElementById('boutonReinit');
 
+let Deposez_ici = document.getElementsByClassName("Deposez_ici");
+
 let ul = document.getElementById('ul');
 
 // mettre le bordur en rouge une fois qu'ont sort de l'input du telephone
@@ -120,12 +122,12 @@ btnReinit.addEventListener('click', () => {
     nomError.innerHTML = '';
     groupe.value = '';
     Bio.innerHTML = '';
-
+    Deposez_ici.value = '';
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
 
-//Début critère d'acceptation Button Reinitiliser
+// Début critère d'acceptation Button Reinitiliser
 
 btnCréer.addEventListener('click', () => {
 
@@ -216,4 +218,37 @@ btnCréer.addEventListener('click', () => {
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
+
+// photo a ajouter
+
+
+let contenaire_photo = document.createElement("div");
+ul.appendChild(contenaire_photo)
+let image = document.createElement('img');
+image.src = 'rose.jpg';
+image.attributes("rose.jpg")
+contenaire_photo.appendChild(image); 
+
+
+boutoncreer.addEventListener("click", function () {
+    let Deposez_ici = document.querySelector(".Deposez_ici")
+    console.log(Deposez_ici.value);
+    let liste = document.querySelector(".liste")
+    liste.appendChild(id)
+
+    function start(event){
+        event.dataTransfer.effectAllowed="move";
+        event.dataTransfer.setData("text", event.target.getAttribute("id"));
+      }
+      function over(event){
+        return ("false");
+      }
+      function drop(event){
+        Object= event.datatransfer.getdata("text");
+        event.currenttarget.appendChild(document.getElementById(Object));
+        event.stopprogation();
+        return("false");
+      }
+    
+})
 
