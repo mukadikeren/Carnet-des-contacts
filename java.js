@@ -202,7 +202,7 @@ btnCréer.addEventListener('click', () => {
 
     let divFont_Awesome = document.createElement('div');
     divFont_Awesome.setAttribute('class', 'container_separation');
-    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i id="suppression" class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
+    divFont_Awesome.innerHTML = '<i id="suppression" class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i id="suppression" class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
 
     /*Fin de la Création de la Div contant les Prenom, Nom - Groupe*/
 
@@ -247,7 +247,7 @@ btnCréer.addEventListener('click', () => {
 
 
     suppression.addEventListener('click', () => {
-        clients.splice(1,)
+        clients.pop()
         li.remove();
     });
 })
