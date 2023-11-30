@@ -247,7 +247,7 @@ btnCréer.addEventListener('click', () => {
 
 
     suppression.addEventListener('click', () => {
-        // clients.pop();
+        clients.splice(1,)
         li.remove();
     });
 })
