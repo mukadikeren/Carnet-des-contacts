@@ -219,51 +219,50 @@ btnCréer.addEventListener('click', () => {
 // Fin Critère d'acceptation Button Reinitiliser
 
 
-// bouton Reinit
-let boutonreinit = document.querySelector("#boutonreinit");
-
-boutonreinit.addEventListener("click", function () {
-    let input = document.querySelector("#li")
-    console.log(input.value); 
-    let li = document.querySelector("#li");
-    let li = document.createElement("li");
-    li.innerHTML= input.value
-    premierecase.appendChild(li);
-
-
-})
-
-
 // photo a ajouter
 
 
-let contenaire_photo = document.createElement("div");
-ul.appendChild(contenaire_photo)
-let image = document.createElement('img');
-image.src = 'rose.jpg';
-image.attributes("rose.jpg")
-contenaire_photo.appendChild(image); 
+// let contenaire_photo = document.createElement("div");
+// ul.appendChild(contenaire_photo)
+// let image = document.createElement('img');
+// image.src = '';
+// image.attributes('')
+// contenaire_photo.appendChild(image); 
 
 
 boutoncreer.addEventListener("click", function () {
-    let Deposez_ici = document.querySelector(".Deposez_ici")
-    console.log(Deposez_ici.value);
-    let liste = document.querySelector(".liste")
-    liste.appendChild(id)
+   
+    let contenaire_photo = document.createElement("div");
+    ul.appendChild(contenaire_photo)
+    let li = document.querySelector('#li');
+    li.setAttribute('id', 'li_liste');
+    let image = document.createElement('img');
+    image.setAttribute('alt', 'Photo profil');
+// fontion du drague
+    function drag(event){
+        event.DataTransfer.setstart('image, ev.target.id');
 
-    function start(event){
-        event.dataTransfer.effectAllowed="move";
-        event.dataTransfer.setData("text", event.target.getAttribute("id"));
-      }
-      function over(event){
-        return ("false");
-      }
-      function drop(event){
-        Object= event.datatransfer.getdata("text");
-        event.currenttarget.appendChild(document.getElementById(Object));
-        event.stopprogation();
-        return("false");
-      }
+        event.preventDefault()
+ // fonction du drop
+        function drop(event) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData('');
+            event.target.appendChild(document.getElementById(data));
+          }
+    }
+    // function start(event){*
+    //     event.dataTransfer.effectAllowed="move";
+    //     event.dataTransfer.setData("text", event.target.getAttribute("id"));
+    //   }
+    //   function over(event){
+    //     return ("false");
+    //   }
+    //   function drop(event){
+    //     Object= event.datatransfer.getdata("text");
+    //     event.currenttarget.appendChild(document.getElementById(Object));
+    //     event.stopprogation();
+    //     return("false");
+    //   }
     
 })
 
