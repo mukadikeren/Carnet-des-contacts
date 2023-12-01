@@ -346,3 +346,9 @@ button {
     
     
 }
+#boutonCréer{
+    color: white;background-color: #0880D6;
+}
+#boutonReinit{
+    color: white;background-color: #FF3838;
+}
