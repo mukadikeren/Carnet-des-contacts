@@ -60,7 +60,7 @@ function validateEmail(email) {
 }
 
 
-emailInput.addEventListener('blur', function () {
+email.addEventListener('blur', function () {
     if (!validateEmail(this.value)) {
         this.style.borderColor = 'red';
         emailError.textContent = 'Veuillez renseigner une adresse email valide';
