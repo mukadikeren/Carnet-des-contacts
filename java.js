@@ -140,8 +140,93 @@ btnReinit.addEventListener('click', () => {
 // Fin Critère d'acceptation Button Reinitiliser
 
 
-//Début critère d'acceptation Button Reinitiliser
+//Fontcion Affichage
 
+function affiche() {
+
+    let li = document.createElement('li');
+    li.setAttribute('id', 'li_liste');
+    let image = document.createElement('img');
+    image.setAttribute('src', 'https://media.licdn.com/dms/image/D4E03AQH6bd5CS2viWQ/profile-displayphoto-shrink_800_800/0/1683023750582?e=2147483647&v=beta&t=ykBYwBoUwId8oy33HM4at7_XdJut2axXMeO-QiA4V_s');
+    image.setAttribute('alt', 'Photo profil');
+
+    /* Div contant tous les elements de li SANS de la photo*/
+    let divEcrits = document.createElement('div');
+    divEcrits.setAttribute('class', 'container_ecrits');
+
+    /* la Div contant les Prenom, Nom - Groupe Et les Font Awesome*/
+    let divNom_Fontawesome = document.createElement('div');
+    divNom_Fontawesome.setAttribute('class', 'containerNom_Fontawesome');
+
+    /*Création de la Div contant les Prenom, Nom - Groupe*/
+    let divPrenom_Groupe = document.createElement('div');
+    divPrenom_Groupe.setAttribute('class', 'containerPrenom_Groupe');
+    divPrenom_Groupe.setAttribute('class', 'container_separation');
+
+    let spanPrenom = document.createElement('span');
+    spanPrenom.innerHTML = clients[c].PRENOM;
+    let spanNom = document.createElement('span');
+    spanNom.innerHTML = clients[c].NOM;
+    let spanTrait = document.createElement('span');
+    spanTrait.innerHTML = '-';
+    let spanGroupe = document.createElement('span');
+    spanGroupe.innerHTML = clients[c].GROUPE;
+
+    /*Mettre les spans:nom,prenom,....dans leur div*/
+    divPrenom_Groupe.appendChild(spanPrenom);
+    divPrenom_Groupe.appendChild(spanNom);
+    divPrenom_Groupe.appendChild(spanTrait);
+    divPrenom_Groupe.appendChild(spanGroupe);
+
+    /*Fin de la Création de la Div contant les Prenom, Nom - Groupe*/
+
+    /*Création de la Div contant les Prenom, Nom - Groupe*/
+
+    let divFont_Awesome = document.createElement('div');
+    divFont_Awesome.setAttribute('class', 'container_separation');
+    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
+
+    /*Fin de la Création de la Div contant les Prenom, Nom - Groupe*/
+
+    /*Début: mise de la Div des Prenom-Groupe et de font awesome dans leur parent*/
+    divNom_Fontawesome.appendChild(divPrenom_Groupe);
+    divNom_Fontawesome.appendChild(divFont_Awesome);
+    /*Fin de la mise dans le parent*/
+
+    /*Début: création de la Div et span du Telephone et la mise de la span dans cette div*/
+    let divTelephone = document.createElement('div');
+    divTelephone.setAttribute('class', 'container_telephone');
+    let spanTelephone = document.createElement('span');
+    spanTelephone.innerHTML = clients[c].TELEPHONE;
+
+    divTelephone.appendChild(spanTelephone);
+    /*Fin création de la Div du Telephone*/
+
+
+    /*Début: création de la Div et span de Lorem ipsum et la mise de ces span dans la Div parent*/
+    let divBio = document.createElement('div');
+    divBio.setAttribute('class', 'container_lorem');
+
+    let spanBio = document.createElement('span');
+    spanBio.setAttribute('class', 'what_lorem');
+    spanBio.innerHTML = clients[c].BIO;
+
+
+    divBio.appendChild(spanBio);
+    /*Fin création de la Div et span de Lorem ipsum */
+
+
+    /*Début: mise de la Div Fontawesome dans son parent et des autres dans leur parent*/
+    divEcrits.appendChild(divNom_Fontawesome);
+    divEcrits.appendChild(divTelephone);
+    divEcrits.appendChild(divBio);
+    /*Fin de la mise dans le parent*/
+
+
+    li.appendChild(image);
+    li.appendChild(divEcrits);
+    ul.appendChild(li);
+}
 
 // Fin Critère d'acceptation Button Reinitiliser
 
@@ -202,7 +287,7 @@ btnCréer.addEventListener('click', () => {
 
     let divFont_Awesome = document.createElement('div');
     divFont_Awesome.setAttribute('class', 'container_separation');
-    divFont_Awesome.innerHTML = '<i id="suppression" class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i id="suppression" class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
+    divFont_Awesome.innerHTML = '<i class="fa-solid fa-user-pen" style="color: #0f1114;"></i><i class="fa-regular fa-trash-can" style="color: #f60440;"></i>';
 
     /*Fin de la Création de la Div contant les Prenom, Nom - Groupe*/
 
@@ -246,9 +331,14 @@ btnCréer.addEventListener('click', () => {
     ul.appendChild(li);
 
 
+    let suppression = document.querySelector('.fa-regular');
+    let modification = document.querySelector('.fa-solid');
+
     suppression.addEventListener('click', () => {
-        clients.pop()
-        li.remove();
+        clients.splice(c, 1);
+
+        //li.remove();
+
     });
 })
 // Fin Critère d'acceptation Button Reinitiliser
