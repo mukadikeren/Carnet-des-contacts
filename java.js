@@ -18,7 +18,11 @@ let btnCréer = document.getElementById('boutonCréer');
 
 let btnReinit = document.getElementById('boutonReinit');
 
+<<<<<<< HEAD
 let myregex = /^[a-zA-Z\s]+$/;
+=======
+let Deposez_ici = document.getElementsByClassName("Deposez_ici");
+>>>>>>> kerenFusionManuelle
 
 let ul = document.getElementById('ul');
 
@@ -64,7 +68,14 @@ email.addEventListener('blur', function () {
     if (!validateEmail(this.value)) {
         this.style.borderColor = 'red';
         emailError.textContent = 'Veuillez renseigner une adresse email valide';
-    } else {
+
+        }
+    // } else if (validateEmail(this.value)){
+    //     this.style.borderColor = 'red';
+    //     emailError.textContent = 'email existe déjà';
+    // }
+
+    else {
         this.style.borderColor = '';
         emailError.textContent = '';
     }
@@ -125,6 +136,7 @@ btnReinit.addEventListener('click', () => {
     email.value = '';
     nom.value = '';
     groupe.value = '';
+<<<<<<< HEAD
     telephone.value = '';
     Bio.value = '',
     emailError.textContent = '';
@@ -136,11 +148,14 @@ btnReinit.addEventListener('click', () => {
     email.style.borderColor = '';
     telephone.style.borderColor = '';
 
+=======
+    Bio.innerHTML = '';
+>>>>>>> kerenFusionManuelle
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
 
-//Début critère d'acceptation Button Reinitiliser
+// Début critère d'acceptation Button Reinitiliser
 
 btnCréer.addEventListener('click', () => {
     
@@ -231,4 +246,62 @@ btnCréer.addEventListener('click', () => {
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
+// Deposez_ici.addEventListener("click", function () {
+//     let span = document.querySelector(".Deposez_ici")
+//     console.log(Deposez_ici.value);
+//     span.innerHTML= Deposez_ici.value
+
+// function imageValide(image) {
+//     let format = /^(jpn|png|)/;
+//     return format.test(image);
+// }
+
+// function (event) {
+//     // Déplace l'élément traîné vers la cible du drop sélectionnée
+
+//     if (event.target.className == "Deposez_ici") {
+//       event.target.style.background = "red";
+//       Deposez_iciError.textContent = 'Veuillez renseigner une image valide.';
+//       event.target.appendChild(dragged);
+//     }
+//     else {
+//         Deposez_ici.style.borderColor = '';
+//         Deposez_iciError.textContent = '';
+//     }
+
+// // fonction du drop
+// document.addEventListener(
+//     "dragover",
+//     function (event) {
+//       // Empêche le comportement par défaut afin d'autoriser le drop
+//       event.preventDefault();
+//     },
+//     console.log("false"),
+//   );
+
+//   document.addEventListener(
+//     "dragenter",
+//     function (event) {
+//       // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
+//       if (event.target.className == "Deposez_ici") {
+//       }
+//     },
+//     console.log("false"),
+//   );
+
+//   document.addEventListener(
+//     "dragleave",
+//     function (event) {
+//       // réinitialisation de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent
+//       if (event.target.className == "Deposez_ici") {
+//       }
+//     },
+//     console.log("false"),
+//   );
+    
+//   }
+    
+
+
+    
 
