@@ -241,10 +241,14 @@ button {
         justify-content:center;
         flex-wrap: wrap;
 
+        padding-left: 30px;
+        padding-right: 30px;
+
     }
     .Formulaire{
         /* height: 52px; */
         width: 100%;
+        height: 530px;
     }
     button {
         width: 50px;

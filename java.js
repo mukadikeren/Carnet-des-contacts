@@ -143,7 +143,7 @@ btnReinit.addEventListener('click', () => {
 //Début critère d'acceptation Button Reinitiliser
 
 btnCréer.addEventListener('click', () => {
-
+    
     let li = document.createElement('li');
     li.setAttribute('id', 'li_liste');
     let image = document.createElement('img');
