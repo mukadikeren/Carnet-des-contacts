@@ -64,7 +64,14 @@ emailInput.addEventListener('blur', function () {
     if (!validateEmail(this.value)) {
         this.style.borderColor = 'red';
         emailError.textContent = 'Veuillez renseigner une adresse email valide';
-    } else {
+
+        }
+    // } else if (validateEmail(this.value)){
+    //     this.style.borderColor = 'red';
+    //     emailError.textContent = 'email existe déjà';
+    // }
+
+    else {
         this.style.borderColor = '';
         emailError.textContent = '';
     }
@@ -122,7 +129,6 @@ btnReinit.addEventListener('click', () => {
     nomError.innerHTML = '';
     groupe.value = '';
     Bio.innerHTML = '';
-    Deposez_ici.value = '';
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
@@ -218,51 +224,62 @@ btnCréer.addEventListener('click', () => {
 })
 // Fin Critère d'acceptation Button Reinitiliser
 
+// Deposez_ici.addEventListener("click", function () {
+//     let span = document.querySelector(".Deposez_ici")
+//     console.log(Deposez_ici.value);
+//     span.innerHTML= Deposez_ici.value
 
-// photo a ajouter
+// function imageValide(image) {
+//     let format = /^(jpn|png|)/;
+//     return format.test(image);
+// }
 
+// function (event) {
+//     // Déplace l'élément traîné vers la cible du drop sélectionnée
 
-// let contenaire_photo = document.createElement("div");
-// ul.appendChild(contenaire_photo)
-// let image = document.createElement('img');
-// image.src = '';
-// image.attributes('')
-// contenaire_photo.appendChild(image); 
+//     if (event.target.className == "Deposez_ici") {
+//       event.target.style.background = "red";
+//       Deposez_iciError.textContent = 'Veuillez renseigner une image valide.';
+//       event.target.appendChild(dragged);
+//     }
+//     else {
+//         Deposez_ici.style.borderColor = '';
+//         Deposez_iciError.textContent = '';
+//     }
 
+// // fonction du drop
+// document.addEventListener(
+//     "dragover",
+//     function (event) {
+//       // Empêche le comportement par défaut afin d'autoriser le drop
+//       event.preventDefault();
+//     },
+//     console.log("false"),
+//   );
 
-boutoncreer.addEventListener("click", function () {
-   
-    let contenaire_photo = document.createElement("div");
-    ul.appendChild(contenaire_photo)
-    let li = document.querySelector('#li');
-    li.setAttribute('id', 'li_liste');
-    let image = document.createElement('img');
-    image.setAttribute('alt', 'Photo profil');
-// fontion du drague
-    function drag(event){
-        event.DataTransfer.setstart('image, ev.target.id');
+//   document.addEventListener(
+//     "dragenter",
+//     function (event) {
+//       // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
+//       if (event.target.className == "Deposez_ici") {
+//       }
+//     },
+//     console.log("false"),
+//   );
 
-        event.preventDefault()
- // fonction du drop
-        function drop(event) {
-            event.preventDefault();
-            let data = event.dataTransfer.getData('');
-            event.target.appendChild(document.getElementById(data));
-          }
-    }
-    // function start(event){*
-    //     event.dataTransfer.effectAllowed="move";
-    //     event.dataTransfer.setData("text", event.target.getAttribute("id"));
-    //   }
-    //   function over(event){
-    //     return ("false");
-    //   }
-    //   function drop(event){
-    //     Object= event.datatransfer.getdata("text");
-    //     event.currenttarget.appendChild(document.getElementById(Object));
-    //     event.stopprogation();
-    //     return("false");
-    //   }
+//   document.addEventListener(
+//     "dragleave",
+//     function (event) {
+//       // réinitialisation de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent
+//       if (event.target.className == "Deposez_ici") {
+//       }
+//     },
+//     console.log("false"),
+//   );
     
-})
+//   }
+    
+
+
+    
 
