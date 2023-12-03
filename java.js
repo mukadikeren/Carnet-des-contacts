@@ -14,6 +14,8 @@ let prenomError = document.getElementById('prenomError');
 let groupe = document.getElementById('groupe');
 let Bio = document.getElementById('bio');
 
+let photo = document.querySelector('.span1');
+
 let btnCréer = document.getElementById('boutonCréer');
 
 let btnReinit = document.getElementById('boutonReinit');
@@ -35,7 +37,48 @@ let clients = [];
 //     });
 // }
 
+
+let imgtag;
 // mettre le bordur en rouge une fois qu'ont sort de l'input du telephone
+
+photo.addEventListener("dragover", (e) => {
+    e.preventDefault();
+})
+
+photo.addEventListener("drop", (event) => {
+    event.preventDefault();
+    let file = event.dataTransfer.files[0];
+    showfile(file);
+
+    //traitement et affichage du fichier
+
+})
+
+function showfile(file) {
+    // on récupere le type de fichier
+
+    let DeposePhoto = document.querySelector('.Deposez-ici');
+    let filetype = file.type;
+    let fileExtension = ['image/jpeg', 'image/png', 'image/jpg'];
+
+    //on verifie la validité du type du fichier
+    if (fileExtension.includes(filetype)) {
+        DeposePhoto.style.display = 'none';
+        let filereader = new FileReader();
+        filereader.readAsDataURL(file);
+
+        filereader.onload = () => {
+            let fileUrl = filereader.result;
+            imgtag = `<img src="${fileUrl}" alt="Image progil" />`;
+            photo.innerHTML = imgtag;
+        }
+    }
+}
+
+
+
+
+
 
 telephone.addEventListener("blur", (event) => {
     event.target.style.border = "red solid 2px";
