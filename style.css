@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-/* RESONSIVE TABLETTE */
-@media screen and (min-width: 600px) and (max-width:1086px) {
-    .contenaire-central {
-        width: 100%;
-    }
-
-}
-
 /* elle englobe tout le deux block */
 .contenaire-central {
     width: 100%;
@@ -47,7 +39,7 @@
     border: 1px solid #C4C4C4;
     width: 40%;
     /* width: 560px; */
-    height: 760px;
+    height: 800px;
     padding: 14px, 21px, 61px, 21px;
     gap: 26px;
 }
@@ -56,7 +48,7 @@
 .liste {
     width: 60%;
     border: 1px solid #C4C4C4;
-    height: 660px;
+    height: 650px;
 
 }
 
@@ -74,9 +66,21 @@
 
 /*Image Affichée*/
 img {
-    width: 18%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     border-radius: 50%;
+    
+}
+.Deposez-ici{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    /* text-align: center; */
+    /* padding-bottom: 20%; */ 
+
+
 }
 
 /*container de li: un element de ul*/
@@ -131,7 +135,7 @@ img {
     height: 40px;
     width: 100%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -145,7 +149,7 @@ img {
     align-items: center;
     height: 40px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -183,30 +187,32 @@ input {
 
 /* pour mdofier le block de la photo a placé dans le cadre */
 .span1 {
-
-    border: 1px solid #C4C4C4;
-    width: 93%;
-    height: 138px;
-    padding: 45px, 77px, 45px, 77px;
-    border: dotted;
-    justify-content: space-between;
+    position: relative;
+    top:30px;
+    display: flex;
+    flex-direction:row ;
+    width: 95%;
+    height: 138px; 
+    border: 2px dashed #C4C4C4; 
+    justify-content:center;
+    align-items: center;
     color: #bbb1b1;
     font-family: 'Poppins', sans-serif;
-    line-height: 24px;
-    text-align: center;
+    text-align: center;  
 }
+
 
 textarea {
     width: 95%;
     height: 75px;
     border: 1px;
-    color: #C4C4C4;
+    color: #686060;
     border: 1px solid #C4C4C4
 }
 
 /* pour les bouton des id */
 button {
-    width: 100px;
+    width: 70px;
     height: 40px;
     border: 1px;
     justify-content: center;
@@ -217,12 +223,28 @@ button {
 
 /* pour modifier tout le block des bouton */
 .bouton {
+    position:relative;
+    top:30px;
     padding-left: 10px;
     padding-top: 15px;
     font-family: 'Poppins', sans-serif;
     justify-content: center;
 }
-/* Responsive design mobile */
+#boutonCréer{
+    color: white;
+    background-color: #0880D6;
+}
+#boutonReinit{
+    color: white;
+    background-color: #FF3838;
+}
+/* RESONSIVE TABLETTE */
+@media screen and (min-width: 600px) and (max-width:1086px) {
+    .contenaire-central {
+        width: 100%;
+    }
+
+}
 @media screen and ( min-width:200px) and ( max-width:600px) {
     * {
         padding: 0px;
@@ -248,7 +270,7 @@ button {
     .Formulaire{
         /* height: 52px; */
         width: 100%;
-        height: 530px;
+        height: 580px;
     }
     button {
         width: 50px;
@@ -314,17 +336,19 @@ button {
         height: 20px;
     }
     .span1 {
- 
-        border: 1px solid #C4C4C4;
-        width: 89%;
-        height:110px;
-        padding: 45px, 77px, 45px, 77px;
-        border: dotted;
-        justify-content: space-between;
+        position: relative;
+        top:30px;
+        display: flex;
+        flex-direction:row ;
+        width: 95%;
+        height: 138px; 
+        border: 2px dashed #C4C4C4; 
+        justify-content:center;
+        align-items: center;
         color: #bbb1b1;
         font-family: 'Poppins', sans-serif;
-        line-height: 24px;   
-        text-align: center;
+        text-align: center;  
+
     }
     .liste {
         width: 100%;
@@ -345,10 +369,4 @@ button {
     }
     
     
-}
-#boutonCréer{
-    color: white;background-color: #0880D6;
-}
-#boutonReinit{
-    color: white;background-color: #FF3838;
 }

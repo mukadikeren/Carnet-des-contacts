@@ -22,64 +22,35 @@
                 <span class="titre1">Formulaire de contact</span>
                 <div class="label">
 
-                    <label>Prénom</label>
-                    <input type="text" id="prenom">
+
+                    <label for="prenomName">Prénom</label>
+                    <input name="prenomName" type="text" id="prenom">
                     <span id="prenomError"></span>
-                    <label>Nom</label>
-                    <input type="text" id="nom">
+                    <label for="NomName">Nom</label>
+                    <input name="NomName" type="text" id="nom">
                     <span id="nomError"></span>
-                    <label>Téléphone</label>
-                    <input type="tel" id="telephone">     
+                    <label for="TelephoneName">Téléphone</label>
+                    <input name="TelephoneName" type="tel" id="telephone">
                     <span id="telephoneError"></span>
-                    <label>Groupe</label>
-                    <input type="number" id="groupe">
-                    <label>Email</label>
-                    <input type="email" id="email">
+                    <label for="GroupeName">Groupe</label>
+                    <input name="GroupeName" type="number" id="groupe">
+                    <label for="emailName">Email</label>
+                    <input name="emailName" type="email" id="email">
                     <span id="emailError"></span>
                     <label for="Bio">Bio</label>
                     <textarea name="Bio" id="bio" cols="30" rows="4"></textarea>
                     <div class="span1">
-                        <span class="Deposez_ici">Deposez la photo <br> ici</span>
+                        <span class="Deposez-ici">Deposez la photo <br> ici</span>
                     </div>
                     <div class="bouton">
-                        <button id="boutonCréer" style="color: white;background-color: #0880D6;">Créer</button>
-                        <button id="boutonReinit" style="color: white;background-color: #FF3838;">Reinit</button>
+                        <button id="boutonCréer">Créer</button>
+                        <button id="boutonReinit">Reinit</button>
                     </div>
                 </div>
             </div>
             <div class="liste">
-                <span class="titre2">liste des contacts</span>
-                <ul id="ul">
-                    <!-- <li id="li_liste">
-
-                        <img src="https://media.licdn.com/dms/image/D4E03AQH6bd5CS2viWQ/profile-displayphoto-shrink_800_800/0/1683023750582?e=2147483647&v=beta&t=ykBYwBoUwId8oy33HM4at7_XdJut2axXMeO-QiA4V_s"
-                            alt="">
-                        <div class="container_ecrits">
-                            <div class="containerNom_Fontawesome">
-                                <div class="containerPrenom_Groupe  container_separation ">
-                                    <span>Prénom</span><span>Nom</span><span>-</span><span>Groupe</span>
-                                </div>
-                                <div class="container_separation ">
-                                    <i class="fa-solid fa-user-pen" style="color: #0f1114;"></i>
-                                    <i class="fa-regular fa-trash-can" style="color: #f60440;"></i>
-                                </div>
-                            </div>
-
-                            <div class="container_telephone">
-                                <span>Téléphone</span>
-                            </div>
-
-                            <div class="container_lorem">
-                                <span class="what_lorem"> what Lorem ipsum ? Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit.
-                                    Debitis blanditiis
-                                    quisquam
-                                    quod consequuntur non quae.
-                                </span>
-                            </div>
-                        </div>
-                    </li> -->
-                </ul>
+                <span class="titre2">Liste des contacts</span>
+                <ul id="ul"></ul>
             </div>
         </div>
     </div>
