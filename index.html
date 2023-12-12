@@ -4,11 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <title>carnet d'adresse</title>
+    <script src="https://kit.fontawesome.com/14a4331c08.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="contenaire-central">
+        <div class="repertoire">
+            <span class="titre-principal">Répertoire des contacts</span>
+        </div>
+        <div class="Formulaire-liste">
+            <div class="Formulaire">
+                <span class="titre1">Formulaire de contact</span>
+                <div class="label">
 
+
+                    <label for="prenomName">Prénom</label>
+                    <input name="prenomName" type="text" id="prenom">
+                    <span id="prenomError"></span>
+                    <label for="NomName">Nom</label>
+                    <input name="NomName" type="text" id="nom">
+                    <span id="nomError"></span>
+                    <label for="TelephoneName">Téléphone</label>
+                    <input name="TelephoneName" type="tel" id="telephone">
+                    <span id="telephoneError"></span>
+                    <label for="GroupeName">Groupe</label>
+                    <input name="GroupeName" type="number" id="groupe">
+                    <label for="emailName">Email</label>
+                    <input name="emailName" type="email" id="email">
+                    <span id="emailError"></span>
+                    <label for="Bio">Bio</label>
+                    <textarea name="Bio" id="bio" cols="30" rows="4"></textarea>
+                    <div class="span1">
+                        <span class="Deposez-ici">Deposez la photo <br> ici</span>
+                    </div>
+                    <div class="bouton">
+                        <button id="boutonCréer" style="color: white;background-color: #0880D6;">Créer</button>
+                        <button id="boutonReinit" style="color: white;background-color: #FF3838;">Reinit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="liste">
+                <span class="titre2">liste des contacts</span>
+                <ul id="ul">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
 </body>
 
 </html>
