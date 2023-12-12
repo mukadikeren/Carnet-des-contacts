@@ -132,7 +132,7 @@ function renit() {
     nom.style.borderColor = '';
     email.style.borderColor = '';
     telephone.style.borderColor = '';
-    fileUrl.value = '';
+    fileUrl.textContent = '';
 }
 // Fin Critère d'acceptation Button Reinitiliser
 
@@ -312,7 +312,6 @@ function m(x, spanPrenom, spanNom, spanGroupe, spanBio, spanTelephone, fileUrl) 
         groupe.value = spanGroupe.innerHTML;
         Bio.value = spanBio.innerHTML;
         telephone.value = spanTelephone.innerHTML;
-        sp
         fileUrl.value = fileUrl.innerHTML;
     })
 }
