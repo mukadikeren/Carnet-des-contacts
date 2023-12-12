@@ -132,7 +132,7 @@ function renit() {
     nom.style.borderColor = '';
     email.style.borderColor = '';
     telephone.style.borderColor = '';
-    fileUrl.textContent = '';
+    photo.innerHTML = '';
 }
 // Fin Critère d'acceptation Button Reinitiliser
 
