@@ -74,9 +74,9 @@
 
 /*Image Affichée*/
 img {
-    width: 18%;
+    width: 22%;
     height: auto;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 /*container de li: un element de ul*/
@@ -195,6 +195,7 @@ input {
     line-height: 24px;
     text-align: center;
 }
+
 
 textarea {
     width: 95%;
